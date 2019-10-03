@@ -23,13 +23,13 @@ def callback():
     user = decoded['originalDetectlntentRequest]['payload']['data']['replyToken']
     userText = decoded['queryReSult']['intent']['displayName']
     #sendtext(user,usertext)
-     if(userText == 'สวัสดี)
+     if(userText == 'สวัสดี')
     sendText(user,'ดีด้วยจ้าา')
      elif (userText == 'ไปละ') :
      sendtext(user,'บาย')
      else :
     sendtext(user,'ว่าอะไรค่ะ')
-    
+ 
      return .200
      def sendText(user. text)    
     LINE_API = 'https://api.line.me/v2/bot/message/reply'
