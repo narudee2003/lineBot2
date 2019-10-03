@@ -22,15 +22,14 @@ def callback():
     decoded = json.loads(json_line)
     user = decoded['originalDetectIntentRequest']['payload']['data']['replyToken']
     userText = decoded['queryResult']['intent']['displayName']
-    #sendtext(user,usertext)
-     if (userText == 'สวัสดี') :
-    sendText (user,'ดีด้วยจ้า')
-     elif (userText == 'ไปละ' ) :
-     sendtext(user'บาย')
-     else :
-    sendtext(user,'อะไรนะคะ')
- 
-     return .200
+    if (userText == 'สวัสดี') :
+        sendText (user,'ดีด้วยจ้า')
+    elif (userText == 'ไปละ' ) :
+        sendtext(user'บาย')
+    else :
+        sendtext(user,'อะไรนะคะ')
+     return ''.200
+
      def sendText(user. text)    
     LINE_API = 'https://api.line.me/v2/bot/message/reply'
     headets =
