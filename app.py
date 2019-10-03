@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     a=os.environ['Authorization']
-    return "นฤดี สุขะ เลขที่ 17 ชั้นม.4/3"
+    return "นายอาคม สุวรรณประเสริฐ เลขที่ 0 ชั้น ม.4/3"
 
 @app.route("/webhook", methods=['POST'])
 def webhook():
@@ -28,12 +28,13 @@ def callback():
         sendtext(user,'บาย')
     else :
         sendtext(user,'อะไรนะคะ')
-     return ''.200
 
-     def sendText(user. text)    
-    LINE_API = 'https://api.line.me/v2/bot/message/reply'
-    headets =
-       'Content-Type': 'application/json; charset=UTF-8',
+    return '',200
+
+def sendText(user, text):
+  LINE_API = 'https://api.line.me/v2/bot/message/reply'
+  headers = {
+    'Content-Type': 'application/json; charset=UTF-8',
     'Authorization': os.environ['Authorization']    # ตั้ง Config vars ใน heroku พร้อมค่า Access token
   }
   data = json.dumps({
